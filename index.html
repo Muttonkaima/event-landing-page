@@ -6,7 +6,7 @@
 <title>Conclave — Enterprise Event Intelligence Platform</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="icon" href="assets/favicon-white.png" type="image/png">
+<link rel="icon" id="favicon" type="image/png">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -16,7 +16,7 @@
 <nav>
   <a href="#home" class="nav-logo">
     <div class="nav-logo-mark">
-        <img src="assets/logo-black.png" alt="Conclave logo">
+        <img id="nav-logo" alt="Conclave logo">
     </div>
   </a>
   <div class="nav-menu" id="navMenu">
@@ -134,23 +134,23 @@
         <div class="slider-viewport">
           <div class="slider-track">
             <figure class="slide-card portrait-slide active">
-              <img src="assets/event-wizard/step1.png" alt="Event template selection step" loading="lazy">
+              <img id="wizard-step1" alt="Event template selection step" loading="lazy">
               <figcaption>Select Template</figcaption>
             </figure>
             <figure class="slide-card portrait-slide">
-              <img src="assets/event-wizard/step2.png" alt="Event details step" loading="lazy">
+              <img id="wizard-step2" alt="Event details step" loading="lazy">
               <figcaption>Event Details</figcaption>
             </figure>
             <figure class="slide-card portrait-slide">
-              <img src="assets/event-wizard/step3.png" alt="Branding step" loading="lazy">
+              <img id="wizard-step3" alt="Branding step" loading="lazy">
               <figcaption>Branding</figcaption>
             </figure>
             <figure class="slide-card portrait-slide">
-              <img src="assets/event-wizard/step4.png" alt="Schedule step" loading="lazy">
+              <img id="wizard-step4" alt="Schedule step" loading="lazy">
               <figcaption>Schedule</figcaption>
             </figure>
             <figure class="slide-card portrait-slide">
-              <img src="assets/event-wizard/step5.png" alt="Registration and ticket settings step" loading="lazy">
+              <img id="wizard-step5" alt="Registration and ticket settings step" loading="lazy">
               <figcaption>Registration & Tickets</figcaption>
             </figure>
           </div>
@@ -195,11 +195,11 @@
         <div class="slider-viewport">
           <div class="slider-track">
             <figure class="slide-card active">
-              <img src="assets/form-builder.png" alt="Registration form builder screen" loading="lazy">
+              <img id="form-builder" alt="Registration form builder screen" loading="lazy">
               <figcaption>Registration Form Builder</figcaption>
             </figure>
             <figure class="slide-card">
-              <img src="assets/email-builder.png" alt="Email template builder screen" loading="lazy">
+              <img id="email-builder" alt="Email template builder screen" loading="lazy">
               <figcaption>Email Template Builder</figcaption>
             </figure>
           </div>
@@ -219,11 +219,11 @@
         <div class="slider-viewport">
           <div class="slider-track">
             <figure class="slide-card active">
-              <img src="assets/screen.png" alt="Screen controller interface" loading="lazy">
+              <img id="screen-img" alt="Screen controller interface" loading="lazy">
               <figcaption>Screen Controller</figcaption>
             </figure>
             <figure class="slide-card">
-              <img src="assets/multi-view.png" alt="Live multi-view screen status dashboard" loading="lazy">
+              <img id="multi-view" alt="Live multi-view screen status dashboard" loading="lazy">
               <figcaption>Live Multi-View</figcaption>
             </figure>
           </div>
@@ -265,15 +265,15 @@
         <div class="slider-viewport">
           <div class="slider-track">
             <figure class="slide-card active">
-              <img src="assets/analytics.png" alt="Event analytics dashboard" loading="lazy">
+              <img id="analytics" alt="Event analytics dashboard" loading="lazy">
               <figcaption>Revenue and Ticket Analytics</figcaption>
             </figure>
             <figure class="slide-card">
-              <img src="assets/attendee.png" alt="Attendee management screen" loading="lazy">
+              <img id="attendee" alt="Attendee management screen" loading="lazy">
               <figcaption>Attendee Management</figcaption>
             </figure>
             <figure class="slide-card">
-              <img src="assets/feedback.png" alt="Attendee feedback dashboard" loading="lazy">
+              <img id="feedback" alt="Attendee feedback dashboard" loading="lazy">
               <figcaption>Feedback Review</figcaption>
             </figure>
           </div>
@@ -457,7 +457,7 @@
       <p class="testimonial-quote">"Conclave gave our organizing team one place to manage registration, event communication, and on-site operations. The workflow felt structured from onboarding through event-day execution."</p>
       <div class="testimonial-author">
         <div class="testimonial-avatar testimonial-avatar-logo">
-          <img src="assets/logo-black.png" alt="Conclave logo">
+          <img class="testimonial-logo" alt="Conclave logo">
         </div>
         <div>
           <div class="testimonial-name">ACM ICAIF Team</div>
@@ -470,7 +470,7 @@
       <p class="testimonial-quote">"From attendee communication to operational coordination, the platform helped our team move faster without losing control over quality, permissions, or the event experience."</p>
       <div class="testimonial-author">
         <div class="testimonial-avatar testimonial-avatar-logo">
-          <img src="assets/logo-black.png" alt="Conclave logo">
+          <img class="testimonial-logo" alt="Conclave logo">
         </div>
         <div>
           <div class="testimonial-name">NTUC Club</div>
@@ -483,7 +483,7 @@
       <p class="testimonial-quote">"The combination of ticketing, feedback, and analytics made it easier to manage the full event lifecycle and review outcomes clearly once the program concluded."</p>
       <div class="testimonial-author">
         <div class="testimonial-avatar testimonial-avatar-logo">
-          <img src="assets/logo-black.png" alt="Conclave logo">
+          <img class="testimonial-logo" alt="Conclave logo">
         </div>
         <div>
           <div class="testimonial-name">BBUL Jain Vidyalaya and SBMJC</div>
@@ -548,7 +548,7 @@
     <div class="footer-brand">
       <a href="#home" class="nav-logo" style="display:inline-flex">
         <div class="nav-logo-mark">
-          <img src="assets/logo-white.png" alt="Conclave logo">
+          <img id="footer-logo" alt="Conclave logo">
         </div>
       </a>
       <p>The enterprise event intelligence platform. Built for organizations that demand excellence at every event.</p>
@@ -704,6 +704,51 @@
 <div class="toast" id="successToast" role="status" aria-live="polite">Thanks. Your demo request has been submitted successfully.</div>
 
 <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+<script src="config.js"></script>
 <script src="script.js"></script>
+<script>
+  // Load images from Vercel storage URLs
+  document.addEventListener('DOMContentLoaded', function() {
+    // Favicon
+    const favicon = document.getElementById('favicon');
+    if (favicon) favicon.href = IMAGE_URLS.favicon;
+    
+    // Navbar logo
+    const navLogo = document.getElementById('nav-logo');
+    if (navLogo) navLogo.src = IMAGE_URLS.logoBlack;
+    
+    // Footer logo
+    const footerLogo = document.getElementById('footer-logo');
+    if (footerLogo) footerLogo.src = IMAGE_URLS.logoWhite;
+    
+    // Testimonial logos
+    document.querySelectorAll('.testimonial-logo').forEach(function(img) {
+      img.src = IMAGE_URLS.logoBlack;
+    });
+    
+    // Event wizard steps
+    const wizardSteps = ['step1', 'step2', 'step3', 'step4', 'step5'];
+    wizardSteps.forEach(function(step) {
+      const el = document.getElementById('wizard-' + step);
+      if (el) el.src = IMAGE_URLS.eventWizard[step];
+    });
+    
+    // Feature screenshots
+    const featureImages = {
+      'form-builder': IMAGE_URLS.formBuilder,
+      'email-builder': IMAGE_URLS.emailBuilder,
+      'screen-img': IMAGE_URLS.screen,
+      'multi-view': IMAGE_URLS.multiView,
+      'analytics': IMAGE_URLS.analytics,
+      'attendee': IMAGE_URLS.attendee,
+      'feedback': IMAGE_URLS.feedback
+    };
+    
+    Object.keys(featureImages).forEach(function(id) {
+      const el = document.getElementById(id);
+      if (el) el.src = featureImages[id];
+    });
+  });
+</script>
 </body>
 </html>
