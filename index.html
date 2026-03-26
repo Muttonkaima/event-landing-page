@@ -13,7 +13,7 @@
 
 <!-- ── NAVBAR ── -->
 <nav>
-  <a href="#" class="nav-logo">
+  <a href="#home" class="nav-logo">
     <div class="nav-logo-mark"></div>
     <span class="nav-logo-text">Conclave</span>
   </a>
@@ -24,8 +24,7 @@
     <li><a href="#contact">Contact</a></li>
   </ul>
   <div class="nav-cta">
-    <a href="#" class="btn-ghost">Sign In</a>
-    <a href="#contact" class="btn-primary">Get Started →</a>
+    <button type="button" class="btn-primary open-demo-modal">Schedule Demo</button>
   </div>
   <div class="hamburger" onclick="this.classList.toggle('open')">
     <span></span><span></span><span></span>
@@ -46,7 +45,7 @@
       Conclave gives organizations a complete command center for events — from onboarding and event branding to ticketing, check-ins, screen control, speaker resources, campaigns, feedback, and analytics.
     </p>
     <div class="hero-actions">
-      <a href="#contact" class="btn-primary btn-large">Request Access →</a>
+      <button type="button" class="btn-primary btn-large open-demo-modal">Request Demo</button>
       <a href="#features" class="btn-ghost btn-large" style="padding:13px 28px;">Explore Features</a>
     </div>
     <div class="hero-trust">
@@ -70,23 +69,16 @@
   <p class="logos-label">Trusted by forward-thinking organizations</p>
   <div class="logos-wrapper">
     <div class="logos-track">
-      <span class="logo-item">Summit Dynamics</span>
-      <span class="logo-item">Nexus Group</span>
-      <span class="logo-item">Vantage Events</span>
-      <span class="logo-item">Meridian Corp</span>
-      <span class="logo-item">Apex Conferences</span>
-      <span class="logo-item">Crestline Media</span>
-      <span class="logo-item">Orbis Networks</span>
-      <span class="logo-item">Pinnacle Events</span>
-      <!-- duplicate for seamless loop -->
-      <span class="logo-item">Summit Dynamics</span>
-      <span class="logo-item">Nexus Group</span>
-      <span class="logo-item">Vantage Events</span>
-      <span class="logo-item">Meridian Corp</span>
-      <span class="logo-item">Apex Conferences</span>
-      <span class="logo-item">Crestline Media</span>
-      <span class="logo-item">Orbis Networks</span>
-      <span class="logo-item">Pinnacle Events</span>
+      <span class="logo-item">Singapore Orthopaedic Association</span>
+      <span class="logo-item">ACM ICAIF</span>
+      <span class="logo-item">Singapore International Menopause Congress</span>
+      <span class="logo-item">NTUC Club</span>
+      <span class="logo-item">BBUL Jain Vidyalaya and SBMJC</span>
+      <span class="logo-item">Singapore Orthopaedic Association</span>
+      <span class="logo-item">ACM ICAIF</span>
+      <span class="logo-item">Singapore International Menopause Congress</span>
+      <span class="logo-item">NTUC Club</span>
+      <span class="logo-item">BBUL Jain Vidyalaya and SBMJC</span>
     </div>
   </div>
 </div>
@@ -99,24 +91,24 @@
 
   <div class="platform-grid">
     <div class="platform-card reveal">
-      <div class="platform-card-icon ic-gold"><i data-lucide="palette"></i></div>
-      <h3>Event Creation & Branding</h3>
-      <p>Create events with branding, color themes, font styles, sessions, attendee limits, registration windows, and all the operational details in one builder.</p>
+      <div class="platform-card-icon ic-coral"><i data-lucide="key-round"></i></div>
+      <h3>Organization Onboarding</h3>
+      <p>Give organizations access, create credentials for authorized teams, and deliver secure login details by email so the right people can get started quickly.</p>
     </div>
     <div class="platform-card reveal reveal-delay-1">
-      <div class="platform-card-icon ic-teal"><i data-lucide="ticket"></i></div>
-      <h3>Ticketing & Payments</h3>
-      <p>Support paid, free, and complementary ticket types with secure checkout, branded confirmation emails, and QR-coded digital tickets for attendees.</p>
+      <div class="platform-card-icon ic-gold"><i data-lucide="palette"></i></div>
+      <h3>Event Setup & Branding</h3>
+      <p>Create events with branding, color themes, font styles, sessions, attendee limits, registration windows, and all the operational details in one builder.</p>
     </div>
     <div class="platform-card reveal reveal-delay-2">
-      <div class="platform-card-icon ic-coral"><i data-lucide="users"></i></div>
-      <h3>Access, Roles & Operations</h3>
-      <p>Provision organizations, deliver credentials by email, add event managers, assign permissions, and run attendee, check-in, and redemption operations with confidence.</p>
+      <div class="platform-card-icon ic-teal"><i data-lucide="ticket"></i></div>
+      <h3>Ticketing, Forms & Campaigns</h3>
+      <p>Manage ticketing, registration forms, email templates, campaigns, and attendee purchase journeys with secure payments and QR-ticket delivery.</p>
     </div>
     <div class="platform-card reveal reveal-delay-3">
       <div class="platform-card-icon ic-gold"><i data-lucide="monitor"></i></div>
-      <h3>Screens, Speakers & Delivery</h3>
-      <p>Create screens, control slides and images, support speaker resources, run campaigns, publish events, collect feedback, and monitor outcomes from one platform.</p>
+      <h3>Operations, Screens & Analytics</h3>
+      <p>Assign managers, control screens, support speakers, run check-ins and redemptions, collect feedback, and monitor revenue and event activity in real time.</p>
     </div>
   </div>
 </section>
@@ -134,101 +126,83 @@
   <!-- Block 1: Event Builder -->
   <div class="feature-block reveal">
     <div class="feature-visual" style="background: linear-gradient(135deg, #F3EFE7 0%, #FDF3E3 100%);">
-      <div class="mock-event-builder">
-        <div class="mock-header">
-          <div style="font-family:'Playfair Display',serif;font-size:0.9rem;font-weight:700;color:var(--ink)">Event Builder</div>
-          <div class="mock-tabs">
-            <div class="mock-tab active">Branding</div>
-            <div class="mock-tab">Sessions</div>
-            <div class="mock-tab">Tickets</div>
+      <div class="feature-slider wizard-slider">
+        <div class="slider-viewport">
+          <div class="slider-track">
+            <figure class="slide-card portrait-slide active">
+              <img src="assets/event-wizard/step1.png" alt="Event template selection step" loading="lazy">
+              <figcaption>Select Template</figcaption>
+            </figure>
+            <figure class="slide-card portrait-slide">
+              <img src="assets/event-wizard/step2.png" alt="Event details step" loading="lazy">
+              <figcaption>Event Details</figcaption>
+            </figure>
+            <figure class="slide-card portrait-slide">
+              <img src="assets/event-wizard/step3.png" alt="Branding step" loading="lazy">
+              <figcaption>Branding</figcaption>
+            </figure>
+            <figure class="slide-card portrait-slide">
+              <img src="assets/event-wizard/step4.png" alt="Schedule step" loading="lazy">
+              <figcaption>Schedule</figcaption>
+            </figure>
+            <figure class="slide-card portrait-slide">
+              <img src="assets/event-wizard/step5.png" alt="Registration and ticket settings step" loading="lazy">
+              <figcaption>Registration & Tickets</figcaption>
+            </figure>
           </div>
         </div>
-        <div class="mock-mini-label">Color Theme</div>
-        <div class="mock-color-row">
-          <div class="mock-swatch active" style="background:#1A6B6B"></div>
-          <div class="mock-swatch" style="background:#C8963E"></div>
-          <div class="mock-swatch" style="background:#D45C3E"></div>
-          <div class="mock-swatch" style="background:#3E4D9E"></div>
-          <div class="mock-swatch" style="background:#0D0F14"></div>
+        <div class="slider-dots" aria-label="Event setup screenshots">
+          <button type="button" class="slider-dot active" aria-label="Show slide 1"></button>
+          <button type="button" class="slider-dot" aria-label="Show slide 2"></button>
+          <button type="button" class="slider-dot" aria-label="Show slide 3"></button>
+          <button type="button" class="slider-dot" aria-label="Show slide 4"></button>
+          <button type="button" class="slider-dot" aria-label="Show slide 5"></button>
         </div>
-        <div class="mock-mini-label">Font Style</div>
-        <div class="mock-font-row" style="margin-bottom:14px">
-          <div class="mock-font-chip active">Serif</div>
-          <div class="mock-font-chip">Sans</div>
-          <div class="mock-font-chip">Modern</div>
-        </div>
-        <div class="mock-mini-label">Event Name</div>
-        <div class="mock-input"></div>
-        <div class="mock-mini-label">Registration Limit</div>
-        <div class="mock-input"></div>
       </div>
     </div>
     <div class="feature-info">
       <div class="feature-badge" style="background:var(--gold-pale);color:var(--gold);border-color:rgba(200,150,62,0.2)"><i data-lucide="sparkles"></i><span>Event Setup</span></div>
       <h3 class="feature-title">Design events that reflect your brand — exactly.</h3>
-      <p class="feature-desc">Give every event its own identity. Set branding, color themes, font styles, sessions, registration duration, attendee limits, and event details, then build the structure your team will operate against.</p>
+      <p class="feature-desc">The event wizard walks teams from template selection to event details, branding, scheduling, registration windows, attendee limits, and ticket configuration in one guided flow.</p>
       <ul class="feature-list">
+        <li>Five-step setup flow from template to launch settings</li>
         <li>Custom branding, color themes, and font styles</li>
-        <li>Session setup with speaker assignment</li>
-        <li>Registration duration and attendee limits</li>
-        <li>Event setup designed for launch readiness</li>
+        <li>Schedule configuration, registration period, and limits</li>
+        <li>Paid, free, and complementary ticket setup</li>
       </ul>
     </div>
   </div>
 
-  <!-- Block 2: Tickets -->
+  <!-- Block 2: Forms & Emails -->
   <div class="feature-block reverse reveal" style="margin-top:32px">
     <div class="feature-info">
-      <div class="feature-badge" style="background:var(--teal-pale);color:var(--teal);border-color:rgba(26,107,107,0.2)"><i data-lucide="ticket"></i><span>Ticketing</span></div>
-      <h3 class="feature-title">Flexible tickets. Seamless payments.</h3>
-      <p class="feature-desc">Offer paid, free, and complementary ticket types with benefit assignments. Attendees complete secure checkout and receive confirmation emails with QR-coded tickets instantly.</p>
+      <div class="feature-badge" style="background:var(--teal-pale);color:var(--teal);border-color:rgba(26,107,107,0.2)"><i data-lucide="mail"></i><span>Forms & Emails</span></div>
+      <h3 class="feature-title">Build registration and communication flows without extra tools.</h3>
+      <p class="feature-desc">Create registration forms for each event and pair them with customizable email templates for confirmations, reminders, invitations, and follow-up communication.</p>
       <ul class="feature-list">
-        <li>Paid, free & complementary ticket tiers</li>
-        <li>Benefit assignment per ticket type</li>
-        <li>Secure online payment processing</li>
-        <li>Confirmation email and QR ticket delivery</li>
+        <li>Drag-and-configure registration form builder</li>
+        <li>Email template editing with reusable event details</li>
+        <li>Better control over attendee communication touchpoints</li>
+        <li>Supports confirmation, reminder, invitation, and thank-you flows</li>
       </ul>
     </div>
     <div class="feature-visual" style="background: linear-gradient(135deg, #E8F5F5 0%, #F3EFE7 100%);">
-      <div class="mock-event-builder">
-        <div class="mock-header">
-          <div style="font-family:'Playfair Display',serif;font-size:0.9rem;font-weight:700;color:var(--ink)">Ticket Types</div>
-          <div class="mock-tabs">
-            <div class="mock-tab active">Tickets</div>
-            <div class="mock-tab">Benefits</div>
+      <div class="feature-slider">
+        <div class="slider-viewport">
+          <div class="slider-track">
+            <figure class="slide-card active">
+              <img src="assets/form-builder.png" alt="Registration form builder screen" loading="lazy">
+              <figcaption>Registration Form Builder</figcaption>
+            </figure>
+            <figure class="slide-card">
+              <img src="assets/email-builder.png" alt="Email template builder screen" loading="lazy">
+              <figcaption>Email Template Builder</figcaption>
+            </figure>
           </div>
         </div>
-        <div class="mock-ticket-row">
-          <div class="mock-ticket">
-            <div class="mock-ticket-left">
-              <div class="mock-ticket-dot" style="background:var(--gold)"></div>
-              <div>
-                <div class="mock-ticket-name">VIP Access</div>
-                <div class="mock-ticket-type">Paid · 50 seats</div>
-              </div>
-            </div>
-            <div class="mock-ticket-price">₹4,999</div>
-          </div>
-          <div class="mock-ticket">
-            <div class="mock-ticket-left">
-              <div class="mock-ticket-dot" style="background:var(--teal)"></div>
-              <div>
-                <div class="mock-ticket-name">General Entry</div>
-                <div class="mock-ticket-type">Paid · 300 seats</div>
-              </div>
-            </div>
-            <div class="mock-ticket-price">₹999</div>
-          </div>
-          <div class="mock-ticket">
-            <div class="mock-ticket-left">
-              <div class="mock-ticket-dot" style="background:var(--coral)"></div>
-              <div>
-                <div class="mock-ticket-name">Speaker Pass</div>
-                <div class="mock-ticket-type">Complementary · 20 seats</div>
-              </div>
-            </div>
-            <div class="mock-ticket-price">Free</div>
-          </div>
+        <div class="slider-dots" aria-label="Forms and email screenshots">
+          <button type="button" class="slider-dot active" aria-label="Show slide 1"></button>
+          <button type="button" class="slider-dot" aria-label="Show slide 2"></button>
         </div>
       </div>
     </div>
@@ -236,96 +210,74 @@
 
   <!-- Block 3: Screens -->
   <div class="feature-block reveal" style="margin-top:32px">
-    <div class="feature-visual" style="background: var(--ink); padding:0; border-radius:var(--radius); overflow:hidden">
-      <div class="mock-screens" style="border-radius:0;box-shadow:none;width:100%">
-        <div class="mock-screens-toolbar">
-          <span>Multi-Screen Controller</span>
-          <div class="mock-dot-row">
-            <div class="mock-dot" style="background:#FF5F57"></div>
-            <div class="mock-dot" style="background:#FFBD2E"></div>
-            <div class="mock-dot" style="background:#28CA41"></div>
+    <div class="feature-visual" style="background: linear-gradient(135deg, #E8F5F5 0%, #e4e1da 100%);">
+      <div class="feature-slider">
+        <div class="slider-viewport">
+          <div class="slider-track">
+            <figure class="slide-card active">
+              <img src="assets/screen.png" alt="Screen controller interface" loading="lazy">
+              <figcaption>Screen Controller</figcaption>
+            </figure>
+            <figure class="slide-card">
+              <img src="assets/multi-view.png" alt="Live multi-view screen status dashboard" loading="lazy">
+              <figcaption>Live Multi-View</figcaption>
+            </figure>
           </div>
         </div>
-        <div class="mock-screen-grid" style="background:var(--ink);padding:16px">
-          <div class="mock-screen-item" style="background:linear-gradient(135deg,#1A6B6B,#0D4444)">
-            <span class="mock-screen-label">Main Hall</span>
-            <div class="status" style="background:#28CA41"></div>
-          </div>
-          <div class="mock-screen-item" style="background:linear-gradient(135deg,#2A2A3E,#1A1A2A)">
-            <span class="mock-screen-label">Lobby A</span>
-            <div class="status" style="background:#28CA41"></div>
-          </div>
-          <div class="mock-screen-item" style="background:linear-gradient(135deg,#C8963E,#8A6020)">
-            <span class="mock-screen-label">Stage</span>
-            <div class="status" style="background:#28CA41"></div>
-          </div>
-          <div class="mock-screen-item" style="background:linear-gradient(135deg,#3A1A1A,#2A1010)">
-            <span class="mock-screen-label">Foyer</span>
-            <div class="status" style="background:#FFBD2E"></div>
-          </div>
-          <div class="mock-screen-item" style="background:rgba(255,255,255,0.04);border-style:dashed">
-            <span class="mock-screen-label" style="opacity:0.3">+ Add Screen</span>
-            <div class="status" style="background:#555"></div>
-          </div>
-          <div class="mock-screen-item" style="background:linear-gradient(135deg,#1A3A6B,#0D2040)">
-            <span class="mock-screen-label">Workshop</span>
-            <div class="status" style="background:#28CA41"></div>
-          </div>
+        <div class="slider-dots" aria-label="Screen management screenshots">
+          <button type="button" class="slider-dot active" aria-label="Show slide 1"></button>
+          <button type="button" class="slider-dot" aria-label="Show slide 2"></button>
         </div>
       </div>
     </div>
     <div class="feature-info">
       <div class="feature-badge" style="background:var(--cream-warm);color:var(--ink-soft);border-color:var(--border)"><i data-lucide="monitor"></i><span>Screens</span></div>
       <h3 class="feature-title">Command every screen at your venue.</h3>
-      <p class="feature-desc">Create multiple event screens, push slideshows and images, control content live for each screen, and monitor every display from a single multi-screen dashboard.</p>
+      <p class="feature-desc">Manage individual screens, rotate content, control slideshows, and monitor a live multi-screen view so venue operations stay synchronized throughout the event.</p>
       <ul class="feature-list">
-        <li>Create & manage unlimited screens</li>
-        <li>Live slideshow and image control</li>
-        <li>Controller for per-screen display changes</li>
-        <li>Multi-screen overview with screen status</li>
+        <li>Screen-level content control for slides and images</li>
+        <li>Live preview and playback controls</li>
+        <li>Multi-view monitoring across active screens</li>
+        <li>Strong fit for speaker sessions and event-day operations</li>
       </ul>
     </div>
   </div>
 
-  <!-- Block 4: Badges & Analytics -->
+  <!-- Block 4: Operations & Insights -->
   <div class="feature-block reverse reveal" style="margin-top:32px">
     <div class="feature-info">
       <div class="feature-badge" style="background:var(--coral-pale);color:var(--coral);border-color:rgba(212,92,62,0.2)"><i data-lucide="chart-column"></i><span>Analytics</span></div>
-      <h3 class="feature-title">Check-ins, badges & revenue — all in view.</h3>
-      <p class="feature-desc">Scan QR tickets at entry, redeem benefits, manage check-ins, build badge templates, and track revenue, ticket activity, and attendee movement with live analytics.</p>
+      <h3 class="feature-title">Track attendees, feedback, and event performance in one place.</h3>
+      <p class="feature-desc">Once the event is live, teams can manage attendees, review submitted feedback, and monitor event performance with analytics that connect activity back to outcomes.</p>
       <ul class="feature-list">
-        <li>QR ticket scanner & check-in management</li>
-        <li>Benefits management and redemptions</li>
-        <li>Custom badge template builder</li>
-        <li>Revenue and ticket analytics dashboard</li>
+        <li>Attendee management with communication actions</li>
+        <li>Feedback review and submission filtering</li>
+        <li>Revenue, ticketing, and attendance insights</li>
+        <li>Clear post-event visibility for reporting and improvement</li>
       </ul>
     </div>
-    <div class="feature-visual" style="background: linear-gradient(135deg, #FCEEE9 0%, #FDF3E3 100%); gap:16px; flex-direction:column; padding:24px; align-items:stretch">
-      <div class="mock-analytics">
-        <div class="mock-mini-label" style="margin-bottom:12px">Revenue Overview</div>
-        <div class="mock-stat-row">
-          <div class="mock-stat">
-            <div class="mock-stat-value">₹2.4L</div>
-            <div class="mock-stat-label">Revenue</div>
-          </div>
-          <div class="mock-stat">
-            <div class="mock-stat-value">847</div>
-            <div class="mock-stat-label">Tickets</div>
-          </div>
-          <div class="mock-stat">
-            <div class="mock-stat-value">93%</div>
-            <div class="mock-stat-label">Check-in</div>
+    <div class="feature-visual" style="background: linear-gradient(135deg, #FCEEE9 0%, #FDF3E3 100%);">
+      <div class="feature-slider">
+        <div class="slider-viewport">
+          <div class="slider-track">
+            <figure class="slide-card active">
+              <img src="assets/analytics.png" alt="Event analytics dashboard" loading="lazy">
+              <figcaption>Revenue and Ticket Analytics</figcaption>
+            </figure>
+            <figure class="slide-card">
+              <img src="assets/attendee.png" alt="Attendee management screen" loading="lazy">
+              <figcaption>Attendee Management</figcaption>
+            </figure>
+            <figure class="slide-card">
+              <img src="assets/feedback.png" alt="Attendee feedback dashboard" loading="lazy">
+              <figcaption>Feedback Review</figcaption>
+            </figure>
           </div>
         </div>
-        <div class="mock-mini-label" style="margin-bottom:8px">Daily Registrations</div>
-        <div class="mock-bar-chart">
-          <div class="mock-bar" style="height:40%"></div>
-          <div class="mock-bar" style="height:55%"></div>
-          <div class="mock-bar" style="height:35%"></div>
-          <div class="mock-bar" style="height:70%"></div>
-          <div class="mock-bar" style="height:60%"></div>
-          <div class="mock-bar accent" style="height:100%"></div>
-          <div class="mock-bar" style="height:80%"></div>
+        <div class="slider-dots" aria-label="Operations and insights screenshots">
+          <button type="button" class="slider-dot active" aria-label="Show slide 1"></button>
+          <button type="button" class="slider-dot" aria-label="Show slide 2"></button>
+          <button type="button" class="slider-dot" aria-label="Show slide 3"></button>
         </div>
       </div>
     </div>
@@ -491,41 +443,41 @@
 </section>
 
 <!-- ── TESTIMONIALS ── -->
-<section class="testimonials">
+<section class="testimonials" id="testimonials">
   <div class="section-label">Testimonials</div>
   <h2 class="section-title">Loved by event teams<br>across industries.</h2>
 
   <div class="testimonials-grid">
     <div class="testimonial-card reveal">
       <div class="testimonial-stars"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></div>
-      <p class="testimonial-quote">"Conclave transformed how we run our annual summit. The screen management alone saved us three people on event day — we controlled everything from one dashboard."</p>
+      <p class="testimonial-quote">"Conclave gave our organizing team one place to manage registration, event communication, and on-site operations. The workflow felt structured from onboarding through event-day execution."</p>
       <div class="testimonial-author">
         <div class="testimonial-avatar" style="background:var(--teal)">R</div>
         <div>
-          <div class="testimonial-name">Rohan Mehta</div>
-          <div class="testimonial-role">Head of Events, Nexus Group</div>
+          <div class="testimonial-name">ACM ICAIF Team</div>
+          <div class="testimonial-role">Conference Organizers</div>
         </div>
       </div>
     </div>
     <div class="testimonial-card reveal reveal-delay-1">
       <div class="testimonial-stars"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></div>
-      <p class="testimonial-quote">"The badge designer and check-in scanner work seamlessly together. Our 1,200-person conference had zero entry bottlenecks for the first time ever."</p>
+      <p class="testimonial-quote">"From attendee communication to operational coordination, the platform helped our team move faster without losing control over quality, permissions, or the event experience."</p>
       <div class="testimonial-author">
         <div class="testimonial-avatar" style="background:var(--gold)">P</div>
         <div>
-          <div class="testimonial-name">Priya Nair</div>
-          <div class="testimonial-role">Event Director, Apex Conferences</div>
+          <div class="testimonial-name">NTUC Club</div>
+          <div class="testimonial-role">Events and Engagement Team</div>
         </div>
       </div>
     </div>
     <div class="testimonial-card reveal reveal-delay-2">
       <div class="testimonial-stars"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></div>
-      <p class="testimonial-quote">"Email campaigns and registration in one place — our outreach is 3x faster now. The trigger-based campaigns fill seats automatically after each speaker confirmation."</p>
+      <p class="testimonial-quote">"The combination of ticketing, feedback, and analytics made it easier to manage the full event lifecycle and review outcomes clearly once the program concluded."</p>
       <div class="testimonial-author">
         <div class="testimonial-avatar" style="background:var(--coral)">S</div>
         <div>
-          <div class="testimonial-name">Sanjana Reddy</div>
-          <div class="testimonial-role">Marketing Lead, Vantage Events</div>
+          <div class="testimonial-name">BBUL Jain Vidyalaya and SBMJC</div>
+          <div class="testimonial-role">Institutional Event Teams</div>
         </div>
       </div>
     </div>
@@ -576,8 +528,7 @@
   <h2>Ready to run your best event yet?</h2>
   <p>Join the organizations that trust Conclave to orchestrate every moment — from invitation to standing ovation.</p>
   <div class="cta-actions">
-    <a href="#" class="btn-gold">Request Access →</a>
-    <a href="#" class="btn-ghost-light">Schedule a Demo</a>
+    <button type="button" class="btn-gold open-demo-modal">Schedule Demo</button>
   </div>
 </section>
 
@@ -585,52 +536,123 @@
 <footer>
   <div class="footer-grid">
     <div class="footer-brand">
-      <a href="#" class="nav-logo" style="display:inline-flex">
+      <a href="#home" class="nav-logo" style="display:inline-flex">
         <div class="nav-logo-mark"></div>
         <span class="nav-logo-text" style="color:#fff">Conclave</span>
       </a>
       <p>The enterprise event intelligence platform. Built for organizations that demand excellence at every event.</p>
     </div>
     <div class="footer-col">
-      <h4>Platform</h4>
+      <h4>Quick Links</h4>
       <ul>
-        <li><a href="#">Event Builder</a></li>
-        <li><a href="#">Ticketing</a></li>
-        <li><a href="#">Screen Management</a></li>
-        <li><a href="#">Speaker Portal</a></li>
-        <li><a href="#">Analytics</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Tools</h4>
-      <ul>
-        <li><a href="#">Email Campaigns</a></li>
-        <li><a href="#">Badge Designer</a></li>
-        <li><a href="#">Check-in Scanner</a></li>
-        <li><a href="#">Feedback Forms</a></li>
-        <li><a href="#">Attendee Manager</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Company</h4>
-      <ul>
-        <li><a href="#">About</a></li>
+        <li><a href="#platform">Platform</a></li>
+        <li><a href="#features">Capabilities</a></li>
+        <li><a href="#how">Process</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
         <li><a href="#faq">FAQ</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Support</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><button type="button" class="footer-link-button" data-legal-modal="privacy">Privacy Policy</button></li>
+        <li><button type="button" class="footer-link-button" data-legal-modal="terms">Terms of Use</button></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
     <p>© 2026 Conclave. All rights reserved.</p>
     <div class="footer-links">
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms of Service</a>
-      <a href="#">Security</a>
+      <button type="button" class="footer-link-button" data-legal-modal="privacy">Privacy Policy</button>
+      <button type="button" class="footer-link-button" data-legal-modal="terms">Terms of Use</button>
     </div>
   </div>
 </footer>
+
+<div class="modal-backdrop" id="demoModal" aria-hidden="true">
+  <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="demoModalTitle">
+    <button type="button" class="modal-close" data-close-modal aria-label="Close dialog">
+      <i data-lucide="x"></i>
+    </button>
+    <div class="modal-copy">
+      <div class="section-label">Request Demo</div>
+      <h3 id="demoModalTitle">Tell us about your event team.</h3>
+      <p>Share a few details and we’ll receive your demo request directly by email.</p>
+    </div>
+    <form id="demoForm" class="demo-form" action="https://formsubmit.io/mithun.1504.gowda@gmail.com" method="POST" target="demo-submit-frame">
+      <input type="hidden" name="_subject" value="New Conclave demo request">
+      <input type="text" name="_formsubmit_id" class="honeypot" tabindex="-1" autocomplete="off">
+      <div class="form-grid">
+        <label>
+          <span>Full Name</span>
+          <input type="text" name="name" required>
+        </label>
+        <label>
+          <span>Organization</span>
+          <input type="text" name="organization" required>
+        </label>
+        <label>
+          <span>Work Email</span>
+          <input type="email" name="email" required>
+        </label>
+        <label>
+          <span>Phone Number</span>
+          <input type="tel" name="phone" required>
+        </label>
+        <label>
+          <span>Your Role</span>
+          <input type="text" name="role" required>
+        </label>
+      </div>
+      <label>
+        <span>What would you like to see in the demo?</span>
+        <textarea name="message" rows="4" required></textarea>
+      </label>
+      <div class="modal-actions">
+        <button type="submit" class="btn-primary btn-large">Submit Request</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="modal-backdrop legal-modal" id="privacyModal" aria-hidden="true">
+  <div class="modal-dialog legal-dialog" role="dialog" aria-modal="true" aria-labelledby="privacyModalTitle">
+    <button type="button" class="modal-close" data-close-modal aria-label="Close dialog">
+      <i data-lucide="x"></i>
+    </button>
+    <h3 id="privacyModalTitle">Privacy Policy</h3>
+    <div class="legal-content">
+      <p>Conclave may process business and personal information provided during demo requests, onboarding, event creation, registration, ticketing, check-ins, speaker coordination, communication workflows, feedback collection, and platform support activities.</p>
+      <p>This information can include organization details, administrator and manager profile data, attendee registration information, ticket purchase records, payment-related reference information, badge data, session and speaker resources, campaign delivery details, feedback responses, and operational analytics generated inside the platform.</p>
+      <p>We use this information to provide the platform, authenticate users, manage event operations, deliver event communications, support ticketing and attendee access, generate reports, improve reliability, respond to support needs, and maintain platform security and auditability.</p>
+      <p>Conclave does not sell personal information. Access to submitted and operational data is limited to authorized personnel, implementation partners, and service providers who need it to operate, support, secure, or improve the service.</p>
+      <p>Organizations using Conclave are responsible for collecting and managing attendee, speaker, and event data in accordance with applicable law and their own internal privacy obligations. Where required, they should obtain the necessary notices and consents from their users and participants.</p>
+      <p>We retain data only for as long as needed for legitimate business, legal, security, and contractual purposes. Requests related to correction, deletion, or access can be directed through the relevant organization administrator or through Conclave support, depending on the relationship involved.</p>
+    </div>
+  </div>
+</div>
+
+<div class="modal-backdrop legal-modal" id="termsModal" aria-hidden="true">
+  <div class="modal-dialog legal-dialog" role="dialog" aria-modal="true" aria-labelledby="termsModalTitle">
+    <button type="button" class="modal-close" data-close-modal aria-label="Close dialog">
+      <i data-lucide="x"></i>
+    </button>
+    <h3 id="termsModalTitle">Terms of Use</h3>
+    <div class="legal-content">
+      <p>This website is intended to provide information about Conclave and allow organizations to request a product demonstration. By using the site, you agree to use it for lawful business purposes and accurate, non-misleading communication.</p>
+      <p>Any access to the Conclave platform, including organization onboarding, user credentialing, event setup, attendee management, screen control, campaigns, feedback collection, and analytics, is subject to separate commercial, implementation, and service arrangements where applicable.</p>
+      <p>Organizations are responsible for the data they configure, upload, or process inside the platform, including attendee details, ticketing information, communication content, speaker resources, and event-specific operational data. They must ensure they have the right to use such information and the authority to manage it through Conclave.</p>
+      <p>Users must not use Conclave to transmit unlawful material, infringe third-party rights, interfere with platform security, attempt unauthorized access, or misuse attendee and event data in ways that violate law, contract, or trust.</p>
+      <p>Platform features, workflows, product descriptions, and visual representations may evolve over time. Nothing on this website alone creates a guarantee of feature availability, implementation scope, or commercial commitment unless expressly agreed in writing.</p>
+      <p>Conclave may suspend, restrict, or update access, workflows, or content when reasonably necessary for security, maintenance, legal compliance, service integrity, or product improvement.</p>
+    </div>
+  </div>
+</div>
+
+<iframe name="demo-submit-frame" class="submission-frame" title="Demo request submission"></iframe>
+<div class="toast" id="successToast" role="status" aria-live="polite">Thanks. Your demo request has been submitted successfully.</div>
 
 <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
 <script src="script.js"></script>
