@@ -27,6 +27,14 @@ const IMAGE_URLS = {
   analytics: "https://v3rmr5mylhqzj8wd.public.blob.vercel-storage.com/assets/analytics.png",
   attendee: "https://v3rmr5mylhqzj8wd.public.blob.vercel-storage.com/assets/attendee.png",
   feedback: "https://v3rmr5mylhqzj8wd.public.blob.vercel-storage.com/assets/feedback.png",
+
+  //Client Logos
+  ntuc: "https://v3rmr5mylhqzj8wd.public.blob.vercel-storage.com/assets/ntuc.png",
+  if25: "https://v3rmr5mylhqzj8wd.public.blob.vercel-storage.com/assets/if25.webp",
+  soa: "https://v3rmr5mylhqzj8wd.public.blob.vercel-storage.com/assets/soa.png",
+  simc: "https://v3rmr5mylhqzj8wd.public.blob.vercel-storage.com/assets/simc.avif",
+  bbul: "https://v3rmr5mylhqzj8wd.public.blob.vercel-storage.com/assets/bbul.png"
+
 };
 
 // Export for use in other scripts

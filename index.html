@@ -72,17 +72,8 @@
 <div class="logos-band">
   <p class="logos-label">Trusted by forward-thinking organizations</p>
   <div class="logos-wrapper">
-    <div class="logos-track">
-      <span class="logo-item">Singapore Orthopaedic Association</span>
-      <span class="logo-item">ACM ICAIF</span>
-      <span class="logo-item">Singapore International Menopause Congress</span>
-      <span class="logo-item">NTUC Club</span>
-      <span class="logo-item">BBUL Jain Vidyalaya and SBMJC</span>
-      <span class="logo-item">Singapore Orthopaedic Association</span>
-      <span class="logo-item">ACM ICAIF</span>
-      <span class="logo-item">Singapore International Menopause Congress</span>
-      <span class="logo-item">NTUC Club</span>
-      <span class="logo-item">BBUL Jain Vidyalaya and SBMJC</span>
+    <div class="logos-track" id="logos-track">
+      <!-- Dynamically populated from script -->
     </div>
   </div>
 </div>
@@ -721,10 +712,49 @@
     const footerLogo = document.getElementById('footer-logo');
     if (footerLogo) footerLogo.src = IMAGE_URLS.logoWhite;
     
-    // Testimonial logos
-    document.querySelectorAll('.testimonial-logo').forEach(function(img) {
-      img.src = IMAGE_URLS.logoBlack;
+    // Testimonial Specific Logos
+    const testimonialMapping = {
+      'ACM ICAIF Team': IMAGE_URLS.if25,
+      'NTUC Club': IMAGE_URLS.ntuc,
+      'BBUL Jain Vidyalaya and SBMJC': IMAGE_URLS.bbul
+    };
+
+    document.querySelectorAll('.testimonial-card').forEach(function(card) {
+      const nameEl = card.querySelector('.testimonial-name');
+      const imgEl = card.querySelector('.testimonial-logo');
+      if (nameEl && imgEl) {
+        const name = nameEl.textContent.trim();
+        if (testimonialMapping[name]) {
+          imgEl.src = testimonialMapping[name];
+        } else {
+          imgEl.src = IMAGE_URLS.logoBlack;
+        }
+      }
     });
+
+    // Populate Logos Band (Marquee)
+    const marqueeLogos = [
+      { src: IMAGE_URLS.soa, alt: 'Singapore Orthopaedic Association' },
+      { src: IMAGE_URLS.if25, alt: 'ACM ICAIF' },
+      { src: IMAGE_URLS.simc, alt: 'Singapore International Menopause Congress' },
+      { src: IMAGE_URLS.ntuc, alt: 'NTUC Club' },
+      { src: IMAGE_URLS.bbul, alt: 'BBUL' }
+    ];
+
+    const logosTrack = document.getElementById('logos-track');
+    if (logosTrack) {
+      // Repeat logos to ensure seamless scroll and fill wide screens
+      const allLogos = [...marqueeLogos, ...marqueeLogos, ...marqueeLogos, ...marqueeLogos];
+      allLogos.forEach(logo => {
+        const div = document.createElement('div');
+        div.className = 'logo-item';
+        const img = document.createElement('img');
+        img.src = logo.src;
+        img.alt = logo.alt;
+        div.appendChild(img);
+        logosTrack.appendChild(div);
+      });
+    }
     
     // Event wizard steps
     const wizardSteps = ['step1', 'step2', 'step3', 'step4', 'step5'];
